@@ -1,7 +1,8 @@
 # angularGo
 Simple TODO Application
 
-Capabilities : 
+<B>Capabilities<B> :  
+ 
 1.	Add task 
 
 2.	Mark it Done 
