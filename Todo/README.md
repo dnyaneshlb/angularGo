@@ -18,5 +18,17 @@ Capabilities :
 7.	Group tasks into predefined groups of colors
 	e.g Green , Red
 	
-8.		csdf
+8.	Ability to drag tasks onto predefined boxes named, Tomorrow, Day After Tomorrow, Later.
+
+9.	Predefined boxes named, Tomorrow, Day After Tomorrow, Later should be collapsible boxes.
+
+10.	Ability to delete a task from both Done and Undone List
+
+11. Ability to add pictures into a task after its creation.
+
+12. Ability to Archieve task.
+
+13.
+
+
 	
