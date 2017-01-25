@@ -38,7 +38,7 @@ Simple TODO Application
 
 
 
-References : http://todolistme.net/, http://flask.io/LB4Wp
+References : check sticky notes
 
 
 	
