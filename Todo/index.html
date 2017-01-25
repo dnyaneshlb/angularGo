@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="Todo"> <!--makes angular active in this section of document-->
+	<head>
+		<title>Hello World</title>
+		<link rel="stylesheet" href="css/topcoat-desktop-dark.css"/>
+		<link rel="stylesheet" href="css/app.css"/>
+		<script type="text/javascript" src="angular.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+
+	</head>
+	<body ng-controller="todocontroller as todo">
+
+		<input type="text" placeholder="what do you want to do?" 
+			ng-keyup="thingtodo && $event.keyCode == 13 ? todo.addItem(thingtodo) : null"/
+			ng-model="thingtodo">
+
+		<div ng-repeat="todoitem in todo.todoList" class="listitem">
+			<div class="colorcategory" style="background-color:{{todoitem.colorcatogory}};"></div>
+			<input type="text" ng-model="todoitem.text">			
+			<label class="topcoat-checkbox">
+			  <input type="checkbox" ng-model="todoitem.done" ng-click="todo.markDone(this)">
+			  <div class="topcoat-checkbox__checkmark"></div>
+			</label>		
+		</div>
+
+		<br><br><br><br>
+
+		<div ng-repeat="doneitem in todo.doneList">
+			<input type="text" ng-model="doneitem.text" class="strikedthroughtext">
+			<label class="topcoat-checkbox">
+			  <input type="checkbox" checked="true" ng-click="todo.markUnDone(this)">
+			  <div class="topcoat-checkbox__checkmark"></div>
+			</label>		
+			<img src="res/trash.png" class="trashcan" ng-click="todo.remove(this)" cursor>
+		</div>
+
+
+	</body>
+</html>
