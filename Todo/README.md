@@ -29,7 +29,16 @@ Simple TODO Application
 
 12. Ability to Archieve task.
 
-13. 
+13. Import and export capabilities
+
+14.	Changing wallpapers each for a day
+
+15. Nothing onlist : you are doing something wrong?
+
+
+
+
+References : http://todolistme.net/, http://flask.io/LB4Wp
 
 
 	
