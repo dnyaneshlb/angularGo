@@ -1,4 +1,4 @@
-# angularGo
+# TODO Application
 Simple TODO Application
 
 <B>Capabilities</B> :    
