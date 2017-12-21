@@ -11,11 +11,18 @@
 	<body ng-controller="todocontroller as todo">
 
 		<input type="text" placeholder="what do you want to do?" 
-			ng-keyup="thingtodo && $event.keyCode == 13 ? todo.addItem(thingtodo) : null"/
-			ng-model="thingtodo">
+			required 
+			ng-keyup="thingtodo && $event.keyCode == 13 ? todo.addItem(thingtodo) : null"
+			ng-model="thingtodo"/>
 
-		<div ng-repeat="todoitem in todo.todoList" class="listitem">
-			<div class="colorcategory" style="background-color:{{todoitem.colorcatogory}};"></div>
+		<div ng-repeat="todoitem in todo.todoList" class="listitem" ondragover=""
+			 ng-mouseleave=todo.hideColorOption($event)>
+			<div class="colorcategory" style="background-color:{{todoitem.colorcatogory}};"
+				 ng-click=todo.openColorOption($event)>
+			</div>
+			<div color-option></div>
+			<img src="res/ham.png" draggable="true" 
+				ondragstart="">
 			<input type="text" ng-model="todoitem.text">			
 			<label class="topcoat-checkbox">
 			  <input type="checkbox" ng-model="todoitem.done" ng-click="todo.markDone(this)">

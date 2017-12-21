@@ -68,6 +68,51 @@
 			});
 		};
 
+		this.openColorOption = function openColorOption(event)
+		{
+			alert("open Color Option");
+		};
+		
+		this.hideColorOption = function hideColorOption(event)
+		{
+			
+		};
+
 	}]);
+
+	todoApp.directive('validTask', function(){
+		return	{
+			require: 'ngModel',
+			link : function(scope, element, attributes, ctrls)
+			{
+				function isValidTask(task)
+				{
+					ctrls.todoList.filter(function(item ){
+						if (item.text === task) 
+						{
+							ctrls.$setValidity('validTask', false);
+						}
+						else
+						{
+							ctrls.$setValidity('validTask', true);
+						}
+							
+					});
+					return task;		
+					
+				}
+				ctrls.$parsers.push(isValidTask); // error on this line
+			}
+		};
+	});
+	
+	
+	todoApp.directive('colorOption', function(){
+		return {
+			template : "/directives/coloroption.html"
+		};
+	});
+
+	
 
 })();

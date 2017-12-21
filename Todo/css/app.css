@@ -25,3 +25,13 @@
 .listitem{
 	margin-bottom: 10px;
 }
+
+
+input.ng-invalid {
+    background-color: pink;
+}
+
+
+input.ng-valid {
+    background-color: lightgreen;
+}

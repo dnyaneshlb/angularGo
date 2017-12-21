@@ -35,7 +35,9 @@ Simple TODO Application
 
 15. Nothing onlist : you are doing something wrong?
 
+16. Validation for pushing same task in todo list.
 
+17. Ability to Add a star to task. After adding star to it, it should move to top in task list
 
 
 References : check sticky notes
